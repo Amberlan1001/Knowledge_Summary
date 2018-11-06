@@ -1,8 +1,0 @@
-*.[oa]
-*.pyc
-*.log
-.DS_Store
-.DS_Store?
-._*
-*.bak
-logs
