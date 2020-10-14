@@ -1,0 +1,14 @@
+# 监控服务列表
+apps:
+  demo:
+    server: demo1
+    ip: 127.0.0.1
+    port: 8080
+  
+# 监控服务参数配置
+monitor:
+  hook: 1deffff
+  server: demo1
+  sleep_time: 300
+  mobile: 
+    - 12000001231
