@@ -103,3 +103,19 @@ Out[20]:
 2  NaN  NaN
 3    f  g_h
 ```
+
+将筛选出的行进行处理并覆盖，采用.loc方法
+使用str.contains获得一个布尔系列，然后使用.loc说“更改这些行和D列”。例如：
+```python
+In [5]: df.loc[df["C"].str.contains("V"), "D"] = df["C"].str.contains("V").str.split("V").str[1]
+
+In [6]: df
+Out[6]: 
+    A               B             C  D
+0   2       asicdsada       v:cVccv  ccv
+1   4  ascccaiiidncll  v:cVccv:ccvc  ccv:ccvc
+2   9             sca           V:c  :c
+3  11            lkss          v:cv  :cv
+4  13           lcoao         v:ccv  :ccv
+5  14        wuduakkk      V:ccvcv:  :ccvcv:
+```
