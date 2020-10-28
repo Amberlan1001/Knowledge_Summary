@@ -119,3 +119,13 @@ Out[6]:
 4  13           lcoao         v:ccv  :ccv
 5  14        wuduakkk      V:ccvcv:  :ccvcv:
 ```
+
+### list嵌套list的二次排序
+```python
+list1 = [[4, 2, 9], [1, 5, 6], [7, 8, 3], [4, 1, 0], [4, 12, 0]]
+sorted(list1, key=lambda k: k[0], reverse=False)
+out:[[1, 5, 6], [4, 2, 9], [4, 1, 0], [4, 12, 0], [7, 8, 3]]
+
+sorted(list1, key=lambda k: (k[0],k[1]), reverse=False)
+out:[[1, 5, 6], [4, 2, 9], [4, 1, 0], [4, 12, 0], [7, 8, 3]]
+```
